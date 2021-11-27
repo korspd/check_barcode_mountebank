@@ -1,0 +1,17 @@
+{
+    "and":[
+       {
+            "equals":{
+                "path":"/barcode/v1/checkgroup",
+                "method":"POST"
+            }
+       },
+       {
+          "matches":{
+             "body":{
+                "barcode":"^[0-9]{1,4}(?![0-9])"
+             }
+          }
+       }
+    ]
+ }

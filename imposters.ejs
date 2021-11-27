@@ -1,0 +1,46 @@
+{
+        "imposters": [
+                {
+                        "port": "6969",
+                        "protocol": "http",
+                        "name": "barcode",
+                        "stubs": [
+                                {
+                                        "predicates": [ <% include barcode/bodycare01/bodycare_predicates.ejs %> ],
+                                        "responses": [ <% include barcode/bodycare01/bodycare_response.ejs %> ]
+                                },
+                                {
+                                        "predicates": [ <% include barcode/bodycare02/bodycare_predicates.ejs %> ],
+                                        "responses": [ <% include barcode/bodycare02/bodycare_response.ejs %> ]
+                                },
+                                {
+                                        "predicates": [ <% include barcode/skincare01/skincare_predicates.ejs %> ],
+                                        "responses": [ <% include barcode/skincare01/skincare_response.ejs %> ]
+                                },
+                                {
+                                        "predicates": [ <% include barcode/skincare02/skincare_predicates.ejs %> ],
+                                        "responses": [ <% include barcode/skincare02/skincare_response.ejs %> ]
+                                },
+                                {
+                                        "predicates": [ <% include barcode/incomplete/incomplete_predicates.ejs %> ],
+                                        "responses": [ <% include barcode/incomplete/incomplete_response.ejs %> ]
+                                },
+                                {
+                                        "predicates": [ <% include barcode/excepttext/excepttext_predicates.ejs %> ],
+                                        "responses": [ <% include barcode/excepttext/excepttext_response.ejs %> ]
+                                },
+                                {
+                                        "predicates": [ <% include barcode/overnumber/overnumber_predicates.ejs %> ],
+                                        "responses": [ <% include barcode/overnumber/overnumber_response.ejs %> ]
+                                },
+                                {
+                                        "predicates": [ <% include barcode/notnull/notnull_predicates.ejs %> ],
+                                        "responses": [ <% include barcode/notnull/notnull_response.ejs %> ]
+                                },
+                                {
+                                        "responses": [ <% include proxy.ejs %> ]
+                                }
+                        ]
+                }
+        ]
+}
